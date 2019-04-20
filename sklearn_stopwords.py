@@ -31,6 +31,7 @@ def main():
     feat = vectorizer.get_feature_names()
     for i,arr in enumerate(x.toarray()):
         for x, ele in enumerate(arr):
+            print(feat[x], ele)
             if i == 0:
                 ict.append(('pytorch', feat[x], ele))
             if i == 1:
