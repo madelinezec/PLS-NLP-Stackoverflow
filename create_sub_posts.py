@@ -2,7 +2,6 @@ import xml.etree.ElementTree as ET
 
 if __name__ == '__main__':
     posts = ET.Element('data')
-    #row = ET.SubElement(posts, "row")
     tree = ET.parse('Posts.xml')
     root = tree.getroot()
    
@@ -13,5 +12,3 @@ if __name__ == '__main__':
     mydata = ET.tostring(posts).decode()
     myfile = open("subposts.xml", "w")
     myfile.write(mydata)
-    #treePosts.write("")
-    #results = re.findall(r'<(.+?)>', child.get('Tags'))
